@@ -12,19 +12,20 @@ public class MovieTest {
 
 
     @Test
-    void createMovie(){
-        Movie movie = new Movie("Star Wars", LocalTime.of(12,30));
+    void createMovie() {
+        Movie movie = new Movie("Star Wars", LocalTime.of(12, 30));
 
-        assertEquals("Star Wars",movie.getTitle());
-        assertEquals(LocalTime.of(12,30),movie.getStartTime());
+        assertEquals("Star Wars", movie.getTitle());
+        assertEquals(LocalTime.of(12, 30), movie.getStartTime());
 
     }
 
     @Test
-    void testEqualsAndHashCode(){
-        Movie movie = new Movie("Star Wars", LocalTime.of(12,30));
-        Movie other = new Movie("Star Wars", LocalTime.of(13,30));
+    void testEqualsAndHashCode() {
+        Movie movie = new Movie("Star Wars", LocalTime.of(12, 30));
+        Movie other = new Movie("Star Wars", LocalTime.of(13, 30));
 
         assertTrue(movie.equals(other));
-        assertEquals(movie.hashCode(),other.hashCode());
+        assertEquals(movie.hashCode(), other.hashCode());
     }
+}
